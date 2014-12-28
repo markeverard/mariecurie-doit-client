@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38C98551-786E-45BF-A1F7-7BC8046133CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarieCurie.DoIt.RestClient</RootNamespace>
+    <AssemblyName>MarieCurie.DoIt.RestClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoItUserClient.cs" />
+    <Compile Include="DoItOrganisationClient.cs" />
+    <Compile Include="DoItCategoryClient.cs" />
+    <Compile Include="DoItOpportunityClient.cs" />
+    <Compile Include="Request\AuthenticatedRequest%27T.cs" />
+    <Compile Include="Request\AuthenticationRequest.cs" />
+    <Compile Include="Request\CategoryListRequest.cs" />
+    <Compile Include="Request\CategoryGetRequest.cs" />
+    <Compile Include="Request\ManagedOpportunityGetRequest.cs" />
+    <Compile Include="Request\OpportunityDeleteRequest.cs" />
+    <Compile Include="Request\OrganisationGetRequest.cs" />
+    <Compile Include="Request\PaginatedRequest.cs" />
+    <Compile Include="Response\ItemsResponse%27T.cs" />
+    <Compile Include="Response\DoItResponse.cs" />
+    <Compile Include="DoItClient.cs" />
+    <Compile Include="Response\ItemsContainer%27T.cs" />
+    <Compile Include="Response\LinkItem.cs" />
+    <Compile Include="Response\Links.cs" />
+    <Compile Include="Response\Meta.cs" />
+    <Compile Include="Response\OrganisationContainer.cs" />
+    <Compile Include="Response\OrganisationResponse.cs" />
+    <Compile Include="Response\UserResponse.cs" />
+    <Compile Include="Response\UserContainer.cs" />
+    <Compile Include="Response\OpportunityContainer.cs" />
+    <Compile Include="Response\CategoryResponse.cs" />
+    <Compile Include="Response\OpportunityResponse.cs" />
+    <Compile Include="Request\OpportunityGetRequest.cs" />
+    <Compile Include="Request\OpportunityUpdateRequest.cs" />
+    <Compile Include="Request\OpportunitySearchRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\OpportunityCreateRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarieCurie.DoIt.Domain\MarieCurie.DoIt.Domain.csproj">
+      <Project>{d6d9ab61-adc5-4441-809a-edb395bd33d1}</Project>
+      <Name>MarieCurie.DoIt.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
