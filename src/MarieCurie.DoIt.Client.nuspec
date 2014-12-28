@@ -3,7 +3,7 @@
   <metadata>
     <id>MarieCurie.DoIt.Client</id>
     <title>MarieCurie.DoIt.Client</title>
-    <version>0.5.1</version>
+    <version>0.5.2</version>
     <authors>Marie Curie</authors>
     <owners>Mark.Everard</owners>
     <projectUrl>https://github.com/mariecurieorguk/mariecurie-doit-client</projectUrl>
@@ -13,7 +13,7 @@
     <summary>A c# implementation of the Do-It platform REST API</summary>
 	<tags>Do-It, Volunteering, Charity, REST</tags>
     <dependencies>
-	  <dependency id="Newtonsoft.Json" version="6.0.4"  />
+	  <dependency id="Newtonsoft.Json" version="5.0.8"  />
       <dependency id="RestSharp" version="104.4.0" />
     </dependencies>
   </metadata>
