@@ -5,7 +5,9 @@ namespace MarieCurie.DoIt.RestClient.Request
 {
     public class OpportunitySearchRequest : PaginatedRequest
     {
-        public string Location { get; set; }
+        public string Location_id { get; set; }
+        public string Lat { get; set; }
+        public string Lng { get; set; }
         public string Miles { get; set; }
         public IEnumerable<Guid> Interests { get; set; }
         public IEnumerable<Guid> Activities { get; set; }

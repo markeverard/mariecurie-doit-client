@@ -106,8 +106,14 @@ namespace MarieCurie.DoIt.RestClient
             if (opportunityRequest.ApplyRecruiterId != Guid.Empty)
                 request.AddParameter("apply_recruiter_id", opportunityRequest.ApplyRecruiterId);
 
-            if (!string.IsNullOrWhiteSpace(opportunityRequest.Location))
-                request.AddParameter("location", opportunityRequest.Location);
+            if (!string.IsNullOrWhiteSpace(opportunityRequest.Location_id))
+                request.AddParameter("location_id", opportunityRequest.Location_id);
+
+            if (!string.IsNullOrWhiteSpace(opportunityRequest.Lat))
+                request.AddParameter("lat", opportunityRequest.Lat);
+
+            if (!string.IsNullOrWhiteSpace(opportunityRequest.Lng))
+                request.AddParameter("lng", opportunityRequest.Lng);
 
             if (opportunityRequest.Page > 1)
                 request.AddParameter("page", opportunityRequest.Page);

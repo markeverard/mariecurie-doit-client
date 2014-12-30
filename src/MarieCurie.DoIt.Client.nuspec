@@ -3,7 +3,7 @@
   <metadata>
     <id>MarieCurie.DoIt.Client</id>
     <title>MarieCurie.DoIt.Client</title>
-    <version>0.5.3</version>
+    <version>1.0.1</version>
     <authors>Marie Curie</authors>
     <owners>Mark.Everard</owners>
     <projectUrl>https://github.com/mariecurieorguk/mariecurie-doit-client</projectUrl>
@@ -12,6 +12,7 @@
     <description>A c# implementation of the Do-It platform REST API. This API powers the main DO-IT website and the rest client allows you to bring the Do-It functionality into your own platform. This effort was produced by the internal team at Marie Curie as part of their back-office integration with Do-It. Talk to us for further details. The package depends on the RestSharp package and currently is implemented for opportunity based request against v1 of the Do-It API</description>
     <summary>A c# implementation of the Do-It platform REST API</summary>
 	<tags>Do-It, Volunteering, Charity, REST</tags>
+	<releaseNotes>Updated opportunity search request to use latitude and longitude correctly</releaseNotes>
     <dependencies>
 	  <dependency id="Newtonsoft.Json" version="5.0.8"  />
       <dependency id="RestSharp" version="104.4.0" />
