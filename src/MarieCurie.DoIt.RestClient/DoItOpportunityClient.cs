@@ -115,6 +115,9 @@ namespace MarieCurie.DoIt.RestClient
             if (!string.IsNullOrWhiteSpace(opportunityRequest.Lng))
                 request.AddParameter("lng", opportunityRequest.Lng);
 
+            if (!string.IsNullOrWhiteSpace(opportunityRequest.Miles))
+                request.AddParameter("miles", opportunityRequest.Miles);
+
             if (opportunityRequest.Page > 1)
                 request.AddParameter("page", opportunityRequest.Page);
 
