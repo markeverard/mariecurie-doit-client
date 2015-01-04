@@ -24,9 +24,9 @@ namespace MarieCurie.DoIt.Domain
          public double Lng { get; set; }
          public double Miles { get; set; }
 
-         public Guid? location_id { get; set; }
-         public string location_name { get; set; }
-         public LocationType? location_type { get; set; }
+         public Guid? Location_id { get; set; }
+         public string Location_name { get; set; }
+         public LocationType? Location_type { get; set; }
          
          public Guid Owner_recruiter_id { get; set; }
          public Guid For_recruiter_id { get; set; }
@@ -34,21 +34,21 @@ namespace MarieCurie.DoIt.Domain
 
          public List<Activity> Activities { get; set; }
          public List<Interest> Interests { get; set; }
-         public List<Requirement> requirements { get; set; }
+         public List<Requirement> Requirements { get; set; }
          public List<Skill> Skills_gained { get; set; }
          public List<Skill> Skills_required { get; set; }
-         public List<Suitability> suitibilities { get; set; }
+         public List<Suitability> Suitibilities { get; set; }
 
          public Availability Availability { get; set; }
 
          public int Places_available { get; set; }
          public bool Working_from_home { get; set; }
 
-         public DateTime Advertise_Start_Date { get; set; } 
-         public DateTime Advertise_End_Date { get; set; }
+         public DateTime Advertise_start_date { get; set; } 
+         public DateTime Advertise_end_date { get; set; }
 
-         public DateTime Specific_End_Date { get; set; }
-         public DateTime Specific_Start_Date { get; set; }
+         public DateTime Specific_end_date { get; set; }
+         public DateTime Specific_start_date { get; set; }
         
          public bool Draft { get; set; }
          public bool Expired { get; set; }

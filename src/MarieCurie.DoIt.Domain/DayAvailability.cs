@@ -19,45 +19,16 @@ namespace MarieCurie.DoIt.Domain
         public List<bool> Wednesday { get; set; }
 
         protected void SetDefaultValues()
-       {
-           var availability = new List<bool> { false, false, false };
-           Monday = availability;
-           Tuesday = availability;
-           Wednesday = availability;
-           Thursday = availability;
-           Friday = availability;
-           Saturday = availability;
-           Sunday = availability;
+        {
+           Monday = new List<bool> { false, false, false }; ;
+           Tuesday = new List<bool> { false, false, false }; ;
+           Wednesday = new List<bool> { false, false, false }; ;
+           Thursday = new List<bool> { false, false, false }; ;
+           Friday = new List<bool> { false, false, false }; ;
+           Saturday = new List<bool> { false, false, false }; ;
+           Sunday = new List<bool> { false, false, false }; ;
        }
        
-       public void SetDayAvailability(DayOfWeek day, bool morning, bool afternoon, bool evening)
-       {
-           var availability = new List<bool> {morning, afternoon, evening};
-
-           switch (day)
-           {
-                case DayOfWeek.Monday:
-                   Monday = availability;
-                   break;
-                case DayOfWeek.Tuesday:
-                   Tuesday = availability;
-                   break;
-                case DayOfWeek.Wednesday:
-                   Wednesday = availability;
-                   break;
-                case DayOfWeek.Thursday:
-                   Thursday = availability;
-                   break;
-                case DayOfWeek.Friday:
-                   Friday = availability;
-                   break;
-                case DayOfWeek.Saturday:
-                   Saturday = availability;
-                   break;
-                default:
-                   Sunday = availability;
-                   break;
-           }
-       }
+      
     }
 }

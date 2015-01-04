@@ -27,10 +27,10 @@ namespace MarieCurie.DoIt.RestClient.Request
             Interests = opportunity.Interests != null ? opportunity.Interests.Select(a => a.Id).ToList() : null;
             Places_available = opportunity.Places_available;
             Practical = opportunity.Practical;
-            Requirements = opportunity.requirements != null ? opportunity.requirements.Select(a => a.Id).ToList() : null;
+            Requirements = opportunity.Requirements != null ? opportunity.Requirements.Select(a => a.Id).ToList() : null;
             Skills_gained = opportunity.Skills_gained != null ? opportunity.Skills_gained.Select(a => a.Id).ToList() : null;
             Skills_required = opportunity.Skills_required != null ? opportunity.Skills_required.Select(a => a.Id).ToList() : null;
-            Suitibilities = opportunity.suitibilities != null ? opportunity.suitibilities.Select(a => a.Id).ToList() : null;
+            Suitibilities = opportunity.Suitibilities != null ? opportunity.Suitibilities.Select(a => a.Id).ToList() : null;
             Title = opportunity.Title;
 
             Owner_recruiter_id = opportunity.Owner_recruiter_id;
@@ -44,19 +44,32 @@ namespace MarieCurie.DoIt.RestClient.Request
             Phone = opportunity.Phone;
             Postcode = opportunity.Postcode;
 
-            Location_id = opportunity.location_id.HasValue ? opportunity.location_id : null;
-            Location_type = opportunity.location_type.ToString();
-
+            Location_id = opportunity.Location_id.HasValue ? opportunity.Location_id : null;
+            Location_type = CalculateFromLocationElements(opportunity);
+         
             Working_from_home = opportunity.Working_from_home;
 
-            Advertise_Start_Date = opportunity.Advertise_Start_Date;
-            Advertise_End_Date = opportunity.Advertise_End_Date;
-            Specific_Start_Date = opportunity.Specific_Start_Date;
-            Specific_End_Date = opportunity.Specific_End_Date;
+            Advertise_start_date = opportunity.Advertise_start_date;
+            Advertise_end_date = opportunity.Advertise_end_date;
+            Specific_start_date = opportunity.Specific_start_date;
+            Specific_end_date = opportunity.Specific_end_date;
 
             Draft = opportunity.Draft;
         }
 
+        private string CalculateFromLocationElements(Opportunity opportunity)
+        {
+            if (opportunity.Working_from_home)
+                return null;
+
+            if (opportunity.Location_id.HasValue)
+                return LocationType.RL.ToString();
+
+            if (!string.IsNullOrEmpty(opportunity.Postcode))
+                return LocationType.SL.ToString();
+
+            return null;
+        }
 
 
         public List<Guid> Activities { get; set; }
@@ -85,15 +98,15 @@ namespace MarieCurie.DoIt.RestClient.Request
         public string Postcode { get; set; }
 
         public Guid? Location_id { get; set; }
-        public string Location_type { get; set; }
+        public string Location_type { get; internal set; }
 
         public bool Working_from_home { get; set; }
 
-        public DateTime Advertise_Start_Date { get; set; }
-        public DateTime Advertise_End_Date { get; set; }
+        public DateTime Advertise_start_date { get; set; }
+        public DateTime Advertise_end_date { get; set; }
 
-        public DateTime Specific_End_Date { get; set; }
-        public DateTime Specific_Start_Date { get; set; }
+        public DateTime Specific_end_date { get; set; }
+        public DateTime Specific_start_date { get; set; }
 
         public bool Draft { get; set; }
     }

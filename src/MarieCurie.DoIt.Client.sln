@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarieCurie.DoIt.RestClient"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarieCurie.DoIt.Domain", "MarieCurie.DoIt.Domain\MarieCurie.DoIt.Domain.csproj", "{D6D9AB61-ADC5-4441-809A-EDB395BD33D1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F8E8D4EB-C64E-4568-97F6-CAAAC01D0FA0}"
+	ProjectSection(SolutionItems) = preProject
+		MarieCurie.DoIt.Client.nuspec = MarieCurie.DoIt.Client.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
