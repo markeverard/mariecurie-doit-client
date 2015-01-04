@@ -177,13 +177,9 @@ namespace MarieCurie.DoIt.RestClient
 
             AuthenticateRequest(ref request, opportunityRequest.Email, opportunityRequest.Password);
 
-            request.AddParameter("address", opportunityRequest.Request.Address);
-            request.AddParameter("blurb", opportunityRequest.Request.Blurb);
-            request.AddParameter("description", opportunityRequest.Request.Description);
-            request.AddParameter("title", opportunityRequest.Request.Title);
-            request.AddParameter("for_recruiter_id", opportunityRequest.Request.For_recruiter_id);
-            request.AddParameter("owner_recruiter_id", opportunityRequest.Request.Owner_recruiter_id);
-
+            var json = JsonConvert.SerializeObject(opportunityRequest.Request, Formatting.Indented, new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() });
+            request.AddParameter("application/json; charset=utf-8", json, ParameterType.RequestBody);
+           
             IRestResponse<OpportunityResponse> response = Client.Execute<OpportunityResponse>(request);
             return response.Data.Data.Opportunity;
         }

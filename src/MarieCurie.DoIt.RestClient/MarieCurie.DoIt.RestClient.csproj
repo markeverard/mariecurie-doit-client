@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoItLocationClient.cs" />
     <Compile Include="DoItUserClient.cs" />
     <Compile Include="DoItOrganisationClient.cs" />
     <Compile Include="DoItCategoryClient.cs" />
@@ -53,6 +54,9 @@
     <Compile Include="Request\AuthenticationRequest.cs" />
     <Compile Include="Request\CategoryListRequest.cs" />
     <Compile Include="Request\CategoryGetRequest.cs" />
+    <Compile Include="Request\LocalAuthoritySearchRequest.cs" />
+    <Compile Include="Request\LocationSearchRequestBase.cs" />
+    <Compile Include="Request\LocationSearchRequest.cs" />
     <Compile Include="Request\ManagedOpportunityGetRequest.cs" />
     <Compile Include="Request\OpportunityDeleteRequest.cs" />
     <Compile Include="Request\OrganisationGetRequest.cs" />

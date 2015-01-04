@@ -50,6 +50,9 @@
     <Compile Include="Image.cs" />
     <Compile Include="Interest.cs" />
     <Compile Include="Dictionaries\InterestsDictionaries.cs" />
+    <Compile Include="LocalAuthority.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="LocationType.cs" />
     <Compile Include="Opportunity.cs" />
     <Compile Include="Organisation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

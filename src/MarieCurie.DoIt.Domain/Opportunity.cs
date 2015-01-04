@@ -13,8 +13,8 @@ namespace MarieCurie.DoIt.Domain
          public string Description { get; set; }
          public string Practical { get; set; }
          
-         public string Address1 { get; set; } 
-         public string Address2 { get; set; }
+         public string Address_1 { get; set; } 
+         public string Address_2 { get; set; }
          public string City { get; set; }
          public string County { get; set; } 
          public string Phone { get; set; }
@@ -24,9 +24,9 @@ namespace MarieCurie.DoIt.Domain
          public double Lng { get; set; }
          public double Miles { get; set; }
 
-         public object location_id { get; set; }
-         public object location_name { get; set; }
-         public object location_type { get; set; }
+         public Guid? location_id { get; set; }
+         public string location_name { get; set; }
+         public LocationType? location_type { get; set; }
          
          public Guid Owner_recruiter_id { get; set; }
          public Guid For_recruiter_id { get; set; }
