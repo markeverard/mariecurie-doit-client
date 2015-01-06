@@ -44,11 +44,11 @@ namespace MarieCurie.DoIt.Domain
          public int Places_available { get; set; }
          public bool Working_from_home { get; set; }
 
-         public DateTime Advertise_start_date { get; set; } 
-         public DateTime Advertise_end_date { get; set; }
+         public DateTime? Advertise_start_date { get; set; } 
+         public DateTime? Advertise_end_date { get; set; }
 
-         public DateTime Specific_end_date { get; set; }
-         public DateTime Specific_start_date { get; set; }
+         public DateTime? Specific_end_date { get; set; }
+         public DateTime? Specific_start_date { get; set; }
         
          public bool Draft { get; set; }
          public bool Expired { get; set; }

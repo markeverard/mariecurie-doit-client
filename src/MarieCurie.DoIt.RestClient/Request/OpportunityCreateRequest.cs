@@ -102,11 +102,11 @@ namespace MarieCurie.DoIt.RestClient.Request
 
         public bool Working_from_home { get; set; }
 
-        public DateTime Advertise_start_date { get; set; }
-        public DateTime Advertise_end_date { get; set; }
+        public DateTime? Advertise_start_date { get; set; }
+        public DateTime? Advertise_end_date { get; set; }
 
-        public DateTime Specific_end_date { get; set; }
-        public DateTime Specific_start_date { get; set; }
+        public DateTime? Specific_end_date { get; set; }
+        public DateTime? Specific_start_date { get; set; }
 
         public bool Draft { get; set; }
     }
