@@ -28,13 +28,13 @@ namespace MarieCurie.DoIt.RestClient
             request.AddHeader("Accept", "application/json, text/json, text/x-json, text/javascript");
 
             if (searchRequest.Page > 1)
-                request.AddHeader("page", searchRequest.Page.ToString());
+                request.AddParameter("page", searchRequest.Page.ToString());
 
             if (searchRequest.Limit > 0)
-                request.AddHeader("limit", searchRequest.Limit.ToString());
+                request.AddParameter("limit", searchRequest.Limit.ToString());
 
             if (!string.IsNullOrEmpty(searchRequest.Name))
-                request.AddHeader("name", searchRequest.Name);
+                request.AddParameter("name", searchRequest.Name);
 
             IRestResponse<ItemsResponse<Location>> response = Client.Execute<ItemsResponse<Location>>(request);
             return response.Data;
@@ -53,13 +53,13 @@ namespace MarieCurie.DoIt.RestClient
             request.AddHeader("Accept", "application/json, text/json, text/x-json, text/javascript");
 
             if (searchRequest.Page > 1)
-                request.AddHeader("page", searchRequest.Page.ToString());
+                request.AddParameter("page", searchRequest.Page.ToString());
 
             if (searchRequest.Limit > 0)
-                request.AddHeader("limit", searchRequest.Limit.ToString());
+                request.AddParameter("limit", searchRequest.Limit.ToString());
 
             if (!string.IsNullOrEmpty(searchRequest.Name))
-                request.AddHeader("name", searchRequest.Name);
+                request.AddParameter("name", searchRequest.Name);
 
             IRestResponse<ItemsResponse<LocalAuthority>> response = Client.Execute<ItemsResponse<LocalAuthority>>(request);
             return response.Data;
@@ -80,14 +80,13 @@ namespace MarieCurie.DoIt.RestClient
 
             var request = new RestRequest(resource, Method.GET);
             request.AddHeader("Accept", "application/json, text/json, text/x-json, text/javascript");
-
+            
             if (searchRequest.Page > 1)
-                request.AddHeader("page", searchRequest.Page.ToString());
+                request.AddParameter("page", searchRequest.Page.ToString());
 
             if (searchRequest.Limit > 0)
-                request.AddHeader("limit", searchRequest.Limit.ToString());
+                request.AddParameter("limit", searchRequest.Limit.ToString());
 
-         
             IRestResponse<ItemsResponse<Opportunity>> response = Client.Execute<ItemsResponse<Opportunity>>(request);
             return response.Data;
         }
